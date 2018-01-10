@@ -1,0 +1,4 @@
+[submodule "Carthage/Checkouts/facebook-ios-sdk"]
+	url = https://github.com/facebook/facebook-ios-sdk.git
+[submodule "Carthage/Checkouts/facebook-sdk-swift"]
+	url = https://github.com/facebook/facebook-sdk-swift.git
