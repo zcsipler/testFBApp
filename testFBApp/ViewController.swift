@@ -8,11 +8,22 @@
 
 import UIKit
 
+import FBSDKCoreKit
+import FBSDKLoginKit
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let facebookReadPermissions = ["public_profile"]
+
+        let facebookLoginManager = FBSDKLoginManager()
+
+        facebookLoginManager.loginBehavior = .native
+        facebookLoginManager.logIn(withReadPermissions: facebookReadPermissions, from: nil, handler: { _,_  in
+            print("Facebook Login Called Back")
+        })
     }
 
     override func didReceiveMemoryWarning() {
